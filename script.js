@@ -393,15 +393,15 @@ if (document.body.classList == 'services-page') {
 	}
 }
 
-// gsap.from('.zoom-in', {
-// 	scrollTrigger: {
-// 		trigger: '.testimonial-img-container',
-// 		start: '20px 80%',
-// 	},
-// 	scale: 0.1,
-// 	duration: 1.3,
-// 	ease: 'power2.out',
-// });
+gsap.from('.zoom-in', {
+	scrollTrigger: {
+		trigger: '.testimonial-img-container',
+		start: '20px 80%',
+	},
+	scale: 0.1,
+	duration: 1.3,
+	ease: 'power2.out',
+});
 
 const accordion = document.querySelectorAll('.question-btn');
 let i;

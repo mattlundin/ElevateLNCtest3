@@ -885,7 +885,7 @@ button:hover {
 }
 
 .form-container {
-	min-width: 450px;
+	min-width: 300px;
 	margin-left: auto;
 	padding: 2rem;
 	font-family: inherit;
@@ -1117,7 +1117,8 @@ footer {
 	.nav-list {
 		position: fixed;
 		flex-direction: column;
-		height: calc(100vh - 80px);
+		/* height: calc(100vh - 80px); */
+		height: calc(var(--vh, 1vh) * 100 - 80px);
 		width: 100%;
 		bottom: 0;
 		right: 0;
@@ -1161,6 +1162,10 @@ footer {
 	.banner-text {
 		padding: 1rem;
 	}
+	.form-container {
+		margin-right: auto;
+		padding: 1rem 0.5rem;
+	}
 }
 @media screen and (max-width: 700px) {
 	.slider-container {
@@ -1169,7 +1174,6 @@ footer {
 	.bottom {
 		padding: 0;
 	}
-	.form-container,
 	.info-work {
 		margin: 0;
 	}

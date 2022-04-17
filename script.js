@@ -18,8 +18,9 @@ function sizeNav() {
 		nav.classList.remove('active');
 		logo.style.width = '220px';
 	}
-	if (window.innerWidth < '450px') {
+	if (window.innerWidth < '650px') {
 		logo.style.width = '110px';
+		logo.style.marginRight = 'auto';
 	}
 }
 

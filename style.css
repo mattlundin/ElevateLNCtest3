@@ -62,7 +62,7 @@ body {
 .logo {
 	margin-right: 50px;
 	height: 100%;
-	width: 150px;
+	width: 220px;
 	/* background: url('/images/logo-small.png'); */
 	background-position: center;
 	background-size: contain;
@@ -1152,13 +1152,13 @@ footer {
 		transform: translateY(0vw);
 		margin-top: 5rem;
 	}
-	/* .logo {
+	.logo {
 		width: 150px;
 		border: 1px solid red;
-	} */
-	/* .logo img {
+	}
+	.logo img {
 		width: 150px;
-	} */
+	}
 	.container {
 		margin: 80px 5px 4rem;
 	}

@@ -60,7 +60,7 @@ body {
 }
 
 .logo {
-	margin-right: 50px;
+	/* margin-right: 50px; */
 	height: 100%;
 	width: 220px;
 	/* background: url('/images/logo-small.png'); */
@@ -69,9 +69,9 @@ body {
 	background-repeat: no-repeat;
 	transition: all 0.5s ease-in-out;
 }
-.small {
+/* .small {
 	width: 150px;
-}
+} */
 
 .logo img {
 	height: 100%;
@@ -1112,7 +1112,7 @@ footer {
 @media screen and (max-width: 815px) {
 	.nav {
 		height: 80px;
-		padding-left: 0; /*! MOBILE LOGO */
+		/* padding-left: 0; ! MOBILE LOGO */
 	}
 	.burger {
 		position: relative;
@@ -1152,13 +1152,12 @@ footer {
 		transform: translateY(0vw);
 		margin-top: 5rem;
 	}
-	.logo {
+	/* .logo {
 		width: 150px;
-		border: 1px solid red;
 	}
 	.logo img {
 		width: 150px;
-	}
+	} */
 	.container {
 		margin: 80px 5px 4rem;
 	}

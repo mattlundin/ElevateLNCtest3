@@ -25,6 +25,7 @@ function sizeNav() {
 		// nav.style.paddingLeft = '0';
 	} else {
 		nav.classList.remove('active');
+		logo.classList.remove('active');
 		logo.style.width = '220px';
 	}
 	// smallLogo();

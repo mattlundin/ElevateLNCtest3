@@ -62,8 +62,8 @@ body {
 .logo {
 	margin-right: 50px;
 	height: 100%;
-	width: 220px;
-	background: url('/images/logo-small.png');
+	width: 150px;
+	/* background: url('/images/logo-small.png'); */
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -1154,6 +1154,7 @@ footer {
 	}
 	.logo {
 		width: 150px;
+		border: 1px solid red;
 	}
 	.logo img {
 		width: 150px;

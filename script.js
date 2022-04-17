@@ -10,29 +10,14 @@ const logoImg = document.querySelector('.logo img');
 
 window.addEventListener('scroll', sizeNav);
 
-// function smallLogo() {
-// 	if (window.innerWidth < '650px') {
-// 		logo.style.width == '150px';
-// 		nav.style.paddingLeft = '0';
-// 	}
-// }
-
 function sizeNav() {
 	if (window.scrollY > nav.offsetHeight - 30) {
 		nav.classList.add('active');
-		// logo.style.width = '150px';
+		logo.style.width = '150px';
 		logo.classList.add('active');
-		// nav.style.paddingLeft = '0';
 	} else {
 		nav.classList.remove('active');
-		// logo.classList.remove('active');
-		// logo.style.width = '220px';
-	}
-	// smallLogo();
-	//! ADDED
-	if ((nav.classList = 'active')) {
-		logo.style.width = '150px';
-	} else {
+		logo.classList.remove('active');
 		logo.style.width = '220px';
 	}
 }

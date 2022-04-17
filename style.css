@@ -1152,13 +1152,13 @@ footer {
 		transform: translateY(0vw);
 		margin-top: 5rem;
 	}
-	.logo {
+	/* .logo {
 		width: 150px;
 		border: 1px solid red;
-	}
-	.logo img {
+	} */
+	/* .logo img {
 		width: 150px;
-	}
+	} */
 	.container {
 		margin: 80px 5px 4rem;
 	}

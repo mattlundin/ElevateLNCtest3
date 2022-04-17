@@ -9,19 +9,23 @@ const logo = document.querySelector('.logo');
 
 window.addEventListener('scroll', sizeNav);
 
+// function smallLogo() {
+// 	if (window.innerWidth < '650px') {
+// 		logo.style.width == '150px';
+// 		nav.style.paddingLeft = '0';
+// 	}
+// }
+
 function sizeNav() {
 	if (window.scrollY > nav.offsetHeight - 30) {
 		nav.classList.add('active');
-		logo.style.width = '150px';
-		logo.classList.add('active');
+		logo.style.width == '150px';
+		// nav.style.paddingLeft = '0';
 	} else {
 		nav.classList.remove('active');
 		logo.style.width = '220px';
 	}
-	if (window.innerWidth < '650px') {
-		logo.style.width = '110px';
-		logo.style.marginRight = 'auto';
-	}
+	// smallLogo();
 }
 
 //~ mobile nav

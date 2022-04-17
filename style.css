@@ -60,13 +60,18 @@ body {
 }
 
 .logo {
+	margin-right: 50px;
 	height: 100%;
 	width: 220px;
-	/* background: url('/images/logo-small.png'); */
+	background: url('/images/logo-small.png');
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
 	transition: all 0.5s ease-in-out;
+	border: 1px solid red;
+}
+.small {
+	width: 150px;
 }
 
 .logo img {
@@ -87,12 +92,12 @@ body {
 	transform: translateX(100%);
 }
 
-.nav.active {
+.active {
 	height: 80px;
 	transition: all 0.5s ease-in-out;
 }
 
-.nav.active a {
+.active a {
 	transition: all 0.5s ease-in-out;
 }
 
@@ -1107,6 +1112,7 @@ footer {
 @media screen and (max-width: 815px) {
 	.nav {
 		height: 80px;
+		padding-left: 0; /*! MOBILE LOGO */
 	}
 	.burger {
 		position: relative;
@@ -1147,6 +1153,9 @@ footer {
 		margin-top: 5rem;
 	}
 	.logo {
+		display: flex;
+		justify-content: flex-start;
+		margin-right: 2rem;
 		width: 150px;
 	}
 	.container {

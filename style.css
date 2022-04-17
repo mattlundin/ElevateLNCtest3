@@ -1139,6 +1139,9 @@ footer {
 		transform: translateY(0vw);
 		margin-top: 5rem;
 	}
+	.logo {
+		width: 150px;
+	}
 	.container {
 		margin: 80px 5px 4rem;
 	}

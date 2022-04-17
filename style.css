@@ -217,12 +217,15 @@ button:hover {
 .img-headline {
 	position: absolute;
 	bottom: 30%;
-	font-size: 3rem;
 }
 
 .img-text {
 	position: absolute;
 	bottom: 20%;
+}
+
+.optional {
+	font-size: clamp(1.2rem, 5vw, 3rem);
 }
 
 /* === end of image slider */
@@ -779,6 +782,11 @@ button:hover {
 	font-size: 1.4rem;
 }
 
+.about-column:first-child,
+.bottom-column:first-child {
+	margin-right: 0;
+}
+
 #different .container {
 	margin-top: 0;
 }
@@ -1117,7 +1125,6 @@ footer {
 	.nav-list {
 		position: fixed;
 		flex-direction: column;
-		/* height: calc(100vh - 80px); */
 		height: calc(var(--vh, 1vh) * 100 - 80px);
 		width: 100%;
 		bottom: 0;
@@ -1151,6 +1158,10 @@ footer {
 	.slider-container {
 		height: 500px;
 	}
+	.faq {
+		margin: 4rem auto;
+		width: 98%;
+	}
 	.about-content {
 		margin: 2rem 0 0;
 		padding: 1rem 0;
@@ -1161,6 +1172,11 @@ footer {
 	.row,
 	.bottom-row {
 		flex-direction: column;
+	}
+	.about-column:first-child,
+	.bottom-column:first-child {
+		margin-bottom: 0;
+		margin-right: 1rem;
 	}
 	.banner-text {
 		padding: 1rem;
@@ -1203,14 +1219,8 @@ footer {
 		max-height: 700px;
 		padding: 3rem 10px;
 	}
-	.row {
-		margin: 0;
-		padding: 0;
-	}
-	.column {
-		min-width: 200px;
-		margin: 0;
-		padding: 0;
+	.about-column {
+		margin: 10px;
 	}
 	.bottom-row {
 		padding: 0;
@@ -1218,6 +1228,11 @@ footer {
 	.bottom-column {
 		margin: 10px;
 		padding: 10px;
+	}
+	.about-column:first-child,
+	.bottom-column:first-child {
+		margin-bottom: 0;
+		margin-right: 10px;
 	}
 	.sub-link {
 		font-size: 1.3rem;

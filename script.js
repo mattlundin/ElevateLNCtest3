@@ -20,15 +20,21 @@ window.addEventListener('scroll', sizeNav);
 function sizeNav() {
 	if (window.scrollY > nav.offsetHeight - 30) {
 		nav.classList.add('active');
-		logo.style.width = '150px';
+		// logo.style.width = '150px';
 		logo.classList.add('active');
 		// nav.style.paddingLeft = '0';
 	} else {
 		nav.classList.remove('active');
 		// logo.classList.remove('active');
-		logo.style.width = '220px';
+		// logo.style.width = '220px';
 	}
 	// smallLogo();
+	//! ADDED
+	if ((nav.classList = 'active')) {
+		logo.style.width = '150px';
+	} else {
+		logo.style.width = '220px';
+	}
 }
 
 //~ mobile nav

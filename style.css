@@ -67,7 +67,6 @@ body {
 	background-size: contain;
 	background-repeat: no-repeat;
 	transition: all 0.5s ease-in-out;
-	border: 1px solid red;
 }
 
 .logo img {

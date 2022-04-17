@@ -21,7 +21,7 @@ function sizeNav() {
 	if (window.scrollY > nav.offsetHeight - 30) {
 		nav.classList.add('active');
 		logo.style.width == '150px';
-		logoImg.sytle.width == '150px';
+		logoImg.style.width == '150px';
 		// nav.style.paddingLeft = '0';
 	} else {
 		nav.classList.remove('active');

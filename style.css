@@ -92,12 +92,12 @@ body {
 	transform: translateX(100%);
 }
 
-.active {
+.nav.active {
 	height: 80px;
 	transition: all 0.5s ease-in-out;
 }
 
-.active a {
+.nav.active a {
 	transition: all 0.5s ease-in-out;
 }
 
@@ -1152,12 +1152,12 @@ footer {
 		transform: translateY(0vw);
 		margin-top: 5rem;
 	}
-	/* .logo {
+	.logo {
 		width: 150px;
 	}
 	.logo img {
 		width: 150px;
-	} */
+	}
 	.container {
 		margin: 80px 5px 4rem;
 	}

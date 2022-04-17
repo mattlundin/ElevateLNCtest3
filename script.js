@@ -20,7 +20,7 @@ window.addEventListener('scroll', sizeNav);
 function sizeNav() {
 	if (window.scrollY > nav.offsetHeight - 30) {
 		nav.classList.add('active');
-		logo.style.width == '150px';
+		logo.style.width = '150px';
 		logo.classList.add('active');
 		// nav.style.paddingLeft = '0';
 	} else {

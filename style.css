@@ -888,6 +888,10 @@ button:hover {
 	line-height: 25px;
 }
 
+.info-work a {
+	text-decoration: underline;
+}
+
 .contact-info {
 	display: flex;
 	flex-direction: column;

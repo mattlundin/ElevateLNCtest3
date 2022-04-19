@@ -257,7 +257,6 @@ button:hover {
 	margin: 6rem 0 4rem;
 	background-color: var(--off-white);
 	border-radius: 10px;
-	border: 1px solid red;
 }
 
 .home-row {
@@ -285,7 +284,6 @@ button:hover {
 .home-img-container {
 	height: 400px;
 	width: 600px;
-	border: 1px solid red;
 }
 
 .home-img-container img {
@@ -1143,7 +1141,6 @@ footer {
 	.home-img-container {
 		height: 300px;
 		width: 450px;
-		border: 1px solid red;
 	}
 	.header-text {
 		max-width: 800px;

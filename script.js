@@ -61,17 +61,17 @@ gsap.to('.nav a', {
 	opacity: 1,
 	stagger: 0.08,
 });
-const btns = document.querySelectorAll('button');
+const btns = document.querySelectorAll('.btn');
 for (let i = 0; i < btns.length; i++) {
 	let btn = btns[i];
 
-	gsap.to(btn, {
+	gsap.from(btn, {
 		scrollTrigger: {
 			trigger: btn,
+			start: '10px 90%',
 		},
-		start: '20px 80%',
+		opacity: 0,
 		duration: 0.3,
-		fontSize: 16,
 	});
 }
 
@@ -179,19 +179,9 @@ if (document.body.classList == 'home-page') {
 
 	const stars = gsap.utils.toArray('.fa-star');
 
-	gsap.to('.date, .quote, .review', {
-		scrollTrigger: {
-			trigger: '.test-card',
-			start: '20px 80%',
-		},
-		y: 0,
-		duration: 1.2,
-		opacity: 1,
-		stagger: 0.2,
-	});
 	gsap.from(stars, {
 		scrollTrigger: {
-			trigger: '.test-card',
+			trigger: stars,
 			start: '20px 80%',
 		},
 		stagger: 0.09,
@@ -384,13 +374,15 @@ gsap.from('.zoom-in', {
 });
 
 const accordion = document.querySelectorAll('.question-btn');
+const icon = document.querySelectorAll('.fa-angle-down');
+const answer = document.querySelectorAll('.answer');
 let i;
 
 for (i = 0; i < accordion.length; i++) {
 	let acc = accordion[i];
 
 	acc.addEventListener('click', function () {
-		this.classList.toggle('.faq-active');
+		this.classList.toggle('faq-active');
 
 		let panel = this.nextElementSibling;
 		if (panel.style.display == 'block') {
@@ -400,6 +392,7 @@ for (i = 0; i < accordion.length; i++) {
 			acc.style.color = 'var(--dark-blue)';
 		} else {
 			panel.style.display = 'block';
+
 			acc.style.backgroundColor = 'var(--dark-blue)';
 			acc.style.color = '#f2f2f2';
 		}

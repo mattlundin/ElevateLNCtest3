@@ -61,17 +61,17 @@ gsap.to('.nav a', {
 	opacity: 1,
 	stagger: 0.08,
 });
-const btns = document.querySelectorAll('button');
+const btns = document.querySelectorAll('.btn');
 for (let i = 0; i < btns.length; i++) {
 	let btn = btns[i];
 
-	gsap.to(btn, {
+	gsap.from(btn, {
 		scrollTrigger: {
 			trigger: btn,
+			start: '10px 90%',
 		},
-		start: '20px 80%',
+		opacity: 0,
 		duration: 0.3,
-		fontSize: 16,
 	});
 }
 
@@ -115,41 +115,51 @@ gsap.from('.banner-text p', {
 	duration: 0.8,
 });
 
+gsap.from('.slide-right', {
+	scrollTrigger: {
+		trigger: '.slide-right',
+		start: '20px 80%',
+	},
+	stagger: 0.5,
+	opacity: 0,
+	x: -200,
+	duration: 0.8,
+});
+
 // * ===== HOME PAGE SLIDER =====
 
-console.clear();
-let count = 0;
-const homeImages = document.querySelectorAll('.img-content');
-const homeText = document.querySelectorAll('.text-container');
+// console.clear();
+// let count = 0;
+// const homeImages = document.querySelectorAll('.img-content');
+// const homeText = document.querySelectorAll('.text-container');
 
-gsap.set(homeImages, { xPercent: -100, opacity: 1, scale: 1 });
-gsap.set(homeImages[0], { xPercent: 0, opacity: 1, scale: 1 });
+// gsap.set(homeImages, { xPercent: -100, opacity: 1, scale: 1 });
+// gsap.set(homeImages[0], { xPercent: 0, opacity: 1, scale: 1 });
 
-function slideIt() {
-	gsap.to(homeImages[count], { xPercent: 100, opacity: 0.8, scale: 0.7 });
-	count = count < homeImages.length - 1 ? ++count : 0;
-	gsap.fromTo(
-		homeImages[count],
-		{ xPercent: -100 },
-		{ xPercent: 0, opacity: 1, scale: 1 }
-	);
-	gsap.fromTo(
-		homeText[count],
-		{ 'clip-path': 'polygon(0 0, 0 0, 0 100%, 0 100%)' },
-		{
-			'clip-path': 'polygon(100% 0, 0 0, 0 100%, 100% 100%)',
-			delay: 0.5,
-			duration: 2,
-		}
-	);
-	gsap.to({}, { duration: 4, onComplete: slideIt });
-	// console.clear();  //! uncomment out
-}
+// function slideIt() {
+// 	gsap.to(homeImages[count], { xPercent: 100, opacity: 0.8, scale: 0.7 });
+// 	count = count < homeImages.length - 1 ? ++count : 0;
+// 	gsap.fromTo(
+// 		homeImages[count],
+// 		{ xPercent: -100 },
+// 		{ xPercent: 0, opacity: 1, scale: 1 }
+// 	);
+// 	gsap.fromTo(
+// 		homeText[count],
+// 		{ 'clip-path': 'polygon(0 0, 0 0, 0 100%, 0 100%)' },
+// 		{
+// 			'clip-path': 'polygon(100% 0, 0 0, 0 100%, 100% 100%)',
+// 			delay: 0.5,
+// 			duration: 2,
+// 		}
+// 	);
+// 	gsap.to({}, { duration: 5.5, onComplete: slideIt });
+// }
 
 // * ===== HOME =====
 
 if (document.body.classList == 'home-page') {
-	gsap.delayedCall(4, () => slideIt());
+	// gsap.delayedCall(4, () => slideIt());
 
 	const homeCol = gsap.utils.toArray('.home-column');
 	for (let i = 0; i < homeCol.length; i++) {
@@ -166,62 +176,20 @@ if (document.body.classList == 'home-page') {
 			'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
 		});
 	}
-	gsap.to('.home-row', {
+
+	const stars = gsap.utils.toArray('.fa-star');
+
+	gsap.from(stars, {
 		scrollTrigger: {
-			trigger: '.home-row',
+			trigger: stars,
 			start: '20px 80%',
 		},
-		ease: 'power2.out',
-		opacity: 1,
-		duration: 0.5,
-		// stagger: 1.6,
-		'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-	});
-	gsap.from('.home-testimonials h3, .home-testimonials p', {
-		scrollTrigger: {
-			trigger: '.home-testimonials',
-			start: '20px 80%',
-		},
-		opacity: 0,
-		x: -200,
+		stagger: 0.09,
+		opacity: 0.5,
+		scale: 0.5,
+		delay: 1,
 	});
 }
-
-let tlSlider = gsap.timeline({
-	defaults: {
-		opacity: 0,
-		y: 0,
-		duration: 0.2,
-	},
-});
-
-// tlSlider.from('homeText', {});
-
-// const homeCol = gsap.utils.toArray('.home-column');
-// for (let i = 0; i < homeCol.length; i++) {
-// 	let hCol = homeCol[i];
-
-// 	gsap.to(hCol, {
-// 		scrollTrigger: {
-// 			trigger: hCol,
-// 			start: '20px 80%',
-// 		},
-// 		opacity: 1,
-// 		stagger: 0.8,
-// 		duration: 0.8,
-// 		'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
-// 	});
-// }
-
-// gsap.from('.banner-text p', {
-// 	scrollTrigger: {
-// 		trigger: '.banner-text',
-// 	},
-// 	opacity: 0,
-// 	y: 200,
-// 	stagger: 0.5,
-// 	duration: 0.8,
-// });
 
 const largeMedia = window.matchMedia('(min-width: 956px)');
 const smallMedia = window.matchMedia('(max-width: 955px)');
@@ -406,13 +374,15 @@ gsap.from('.zoom-in', {
 });
 
 const accordion = document.querySelectorAll('.question-btn');
+const icon = document.querySelectorAll('.fa-angle-down');
+const answer = document.querySelectorAll('.answer');
 let i;
 
 for (i = 0; i < accordion.length; i++) {
 	let acc = accordion[i];
 
 	acc.addEventListener('click', function () {
-		this.classList.toggle('.faq-active');
+		this.classList.toggle('faq-active');
 
 		let panel = this.nextElementSibling;
 		if (panel.style.display == 'block') {
@@ -422,6 +392,7 @@ for (i = 0; i < accordion.length; i++) {
 			acc.style.color = 'var(--dark-blue)';
 		} else {
 			panel.style.display = 'block';
+
 			acc.style.backgroundColor = 'var(--dark-blue)';
 			acc.style.color = '#f2f2f2';
 		}
@@ -487,7 +458,7 @@ for (let i = 0; i < slideUp.length; i++) {
 	gsap.from(slide, {
 		scrollTrigger: {
 			trigger: slide,
-			start: '10px 90%',
+			start: '20px 80%',
 		},
 		y: 100,
 		opacity: 0,
